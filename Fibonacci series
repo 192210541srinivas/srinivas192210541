@@ -1,28 +1,23 @@
 #include <stdio.h>
- #include <conio.h>
+int main() {
 
- 
-int main()
-{
-    int a[1000],i,n,c=0;
-   
-    printf("Enter size of the array : ");
-    scanf("%d", &n);
- 
-    printf("Enter elements in array : ");
-    for(i=0; i<n; i++)
-    {
-        scanf("%d", &a[i]);
-    }
- 
-     for(i=0; i<n; i++)
-    {
-         
-        if(a[i] < 0)
-         c++;
-    }
-         printf("  count  of negative numbers  in array: %d",c);
+  int i, n;
+  
+  int t1 = 0, t2 = 1;
 
+  int nextTerm = t1 + t2;
+
+  printf("Enter the number of terms: ");
+  scanf("%d", &n);
+
+  printf("Fibonacci Series: %d, %d, ", t1, t2);
+
+  for (i = 3; i <= n; ++i) {
+    printf("%d, ", nextTerm);
+    t1 = t2;
+    t2 = nextTerm;
+    nextTerm = t1 + t2;
+  }
  
-    return 0;
-}
+   retrun 0;
+}  
